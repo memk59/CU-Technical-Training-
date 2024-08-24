@@ -17,6 +17,39 @@ Determine the node(index) where a given binary is not balanced.
 
 ## Question 3
 In a balanced BST determine the 2 strings which results into a given concatenated string.
+Approach
+
+```
+    Function treeToList(Node node, List<String> list):
+        If node is NULL:
+            Return list
+        treeToList(node.left, list)
+        list.append(node.data)
+        treeToList(node.right, list)
+        Return list
+
+    Function isPairPresent(Node node, String target):
+        List<String> a1 = empty list
+        List<String> a2 = treeToList(node, a1)
+        start = 0
+        end = size of a2 - 1
+        
+        While start < end:
+            If a2[start] + a2[end] == target:
+                Print "Pair Found: " + a2[start] + " + " + a2[end] + " = " + target
+                Return True
+            If a2[start] + a2[end] > target:
+                end--
+            If a2[start] + a2[end] < target:
+                start++
+        Print "No such values are found!"
+        Return False
+```
+
+
+
+Time Complexity
+- O(N), for inorder traversal, O(N), for pair checking. Total O(N)
 
 ## Question 4
 kth smallest string from AVL tree in O(logn).
