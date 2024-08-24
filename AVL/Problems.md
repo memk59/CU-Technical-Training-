@@ -16,7 +16,14 @@ Constraints:
 Determine the node(index) where a given binary is not balanced.
 
 ## Question 3
-In a balanced BST determine the 2 strings which results into a given concatenated string.
+Given a balanced Binary Search Tree (BST) containing unique strings, determine two distinct strings from the BST that, when concatenated, result in a specified target concatenated string.
+
+Example
+```
+Input: root = ["Dog","Bat","Fan","Apple",null,"Eagle","Goat"], target=AppleGoat(Apple + Goat)
+Output: true
+```
+
 Approach
 
 ```
