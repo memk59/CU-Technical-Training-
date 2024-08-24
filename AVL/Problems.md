@@ -16,13 +16,30 @@ Constraints:
 Determine the node(index) where a given binary is not balanced.
 
 ## Question 3
-Determine the 2 strings which results into a given concatenated string.
+In a balanced BST determine the 2 strings which results into a given concatenated string.
 
 ## Question 4
 kth smallest string from AVL tree in O(logn).
 
 ## Question 5
-Sorted array of strings to Balanced BST.
+Given a sorted array of strings, construct a balanced Binary Search Tree (BST). The binary search tree property should be maintained, where for any given node, the left subtree contains only nodes with strings that are lexicographically less than the node's string, and the right subtree contains only nodes with strings that are lexicographically greater
+
+Approach
+
+```
+Function sortedArrayToBST(arr, start, end):
+    If start > end:
+        Return NULL
+    mid = (start + end) / 2
+    root = newNode(arr[mid])
+    root.left = sortedArrayToBST(arr, start, mid - 1)
+    root.right = sortedArrayToBST(arr, mid + 1, end)
+    Return root
+```
+Time Complexity
+
+- O(N), function processes each element of the array once.
+
 
 ## Question 6
 Sort a given Linked List and convert to Balanced BST.
