@@ -129,11 +129,12 @@ int main()
 { 
     BinarySearchTree *tree = new BinarySearchTree(); 
     /* 
-            15 
-            /     \ 
-        10     20 
-        / \     / \ 
-        8 12 16 25 */
+            Dog
+          /     \ 
+        Bat      Fan 
+       /   \    /    \ 
+     Apple Cat Eagle Goat */
+  
     tree->insert("Dog"); 
     tree->insert("Bat"); 
     tree->insert("Fan"); 
